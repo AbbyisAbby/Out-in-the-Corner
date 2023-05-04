@@ -1,0 +1,281 @@
+:root {
+    --color-bg: #c3c3c3;
+    --color-header: #ffffff;
+    --color-dark-text: #2b2b2b;
+    --color-nav: #e8e8e8;
+    --color-light: #fffdfb;
+    --color-light-text: #ffffff;
+    --color-links: #e84956;
+
+    --transition-time: .25s;
+}
+
+a {
+    color: var(--color-links);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Courier New", Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+    cursor: url(/img/korrel.png);
+}
+
+html {
+    background-color: var(--color-header);
+}
+
+#header {
+    color: var(--color-dark-text);
+    background-color: var(--color-nav);
+    box-shadow: 0 2px 0 var(--color-dark-text);
+
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    text-align: center; 
+}
+
+header {
+    background-color: var(--color-header);
+
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding: auto;
+
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+nav a{
+    display: flex;
+    flex-direction: column;
+    
+    padding: 0.5em;
+
+    top: 4em;
+    font-size: 1.25em;
+
+    /* height: 0;
+    padding: 0; */
+}
+
+nav a:hover {
+    animation: nav_animate var(--transition-time);
+    background-color: var(--color-links);
+    color: var(--color-header);
+    transition-delay: var(--transition-time);
+}
+
+#wrapper {
+    background-color: var(--color-header);
+    height: 100%;
+    margin-bottom: 2em;
+}
+
+main {
+    display: block;
+    z-index: 20;
+
+    width: 90%;
+    height: 100%;
+    margin: auto;
+
+    padding-top: 7em;
+    padding-bottom: 1em;
+}
+
+main div {
+    background-color: var(--color-light);
+    border: 1px solid var(--color-dark-text);
+    color: var(--color-dark-text);
+
+    box-shadow: 2px 2px 2px;
+
+    width: auto;
+    height: 100%;
+    margin: auto;
+    margin-top: 1em;
+    padding: 2em;
+}
+
+#endofpage {
+    z-index: -1;
+    position: fixed;
+    width: 100%;
+
+    text-align: center;
+    bottom: 0.5em;
+}
+
+h2 {
+    cursor: url(/img/korrel.png);
+    text-align: center;
+}
+
+h3 {
+    margin-top: 0.5em;
+}
+
+ul {
+    /* text-indent: 1em; */
+    padding-left: 2em;
+}
+
+img {
+    width: fit-content;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.img {
+    width: auto;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.date {
+    font-style: italic;
+}
+
+.center {
+    text-align: center;
+    letter-spacing: 0.25em;
+}
+
+@keyframes nav_animate {
+    from {
+        background-color: none;
+        color: var(--color-links);
+    }
+
+    to {
+        background-color: var(--color-links);
+        color: var(--color-header);
+    }
+}
+
+@media (max-width:490px){
+    main {
+        padding-top: 10em;
+    }
+}
+
+@media (min-width:700px){
+    #fold {
+        background-color: var(--color-dark-text);
+        position: absolute;
+    
+        height: 3em;
+        width: 15em;
+        
+        top: 3.5em;
+        left: -5em;
+
+        transform: rotate(-55deg);
+    }
+
+    header {
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        justify-content: unset;
+        width: 80%;
+        margin: auto;
+        padding: auto;
+        
+    }
+
+    nav a {
+        width: 90%;
+    }
+
+    main {
+        padding-top: 10em;
+    }
+}
+
+@media (min-width:800px) {
+
+    header {
+        text-align: left;
+        padding-left: 20%;
+        padding-right: 10%;
+    }
+
+    nav {
+        display: flex;
+        width: 80%;
+        margin: auto;
+        padding: auto;
+    }
+
+    main {
+        width: 60%;
+    }
+}
+
+@media (min-width:1000px) {
+
+    html {
+        background-color: var(--color-dark-text);
+    }
+
+    main {
+        background-color: none;
+        width: 100%;
+        padding-top: 8em;
+    }
+
+    main div {
+        background-color: var(--color-header);
+        width: 80%;
+        border: none;
+    
+        box-shadow: none;
+    
+        width: auto;
+        height: 100%;
+        
+        margin: auto;
+        margin-top: 1em;
+        padding: 2em;
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    nav {
+        flex-direction: row;
+        width: 60%;
+    }
+
+    nav a {
+        /* margin-right: 1em; */
+        width: auto;
+    }
+    
+    .title{
+        background-color: var(--color-dark-text);
+        color: var(--color-header);
+        font-size: 2.5em;
+
+        margin-top: -4em;
+        padding: 2em;
+        padding-top: 8em;
+        width: unset;
+    }
+
+    .img {
+        background-color: var(--color-dark-text);
+        margin-top: 0;
+    }
+
+    #endofpage {
+        color: var(--color-header);
+    }
+
+}

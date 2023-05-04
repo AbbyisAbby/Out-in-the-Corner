@@ -1,0 +1,35 @@
+@import "style.css";
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+    margin: auto;
+}
+
+form .txt {
+    background-color: var(--color-header);
+    border: 1px solid var(--color-nav);
+    border-bottom: 1px solid var(--color-dark-text);
+    margin-bottom: 1em;
+    line-height: 2em;
+}
+
+textarea{
+
+    border: 1px solid var(--color-nav);
+    background-color: var(--color-header);
+    border-bottom: 1px solid var(--color-dark-text);
+
+    resize: none;
+}
+
+input[type=submit] {
+    background-color: var(--color-header);
+    border: 1px solid var(--color-dark-text);
+    margin-top: 1em;
+    height: 3em;
+    width: 30%;
+    /* align-self: center; */
+}

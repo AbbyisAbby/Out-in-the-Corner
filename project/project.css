@@ -1,0 +1,39 @@
+/* @import url('../style.css'); */
+img:hover {
+    animation: enlarge var(--transition-time);
+    transform: scale(105%);
+}
+
+@media (min-width:1000px) {
+
+    img {
+        margin: auto;
+        width: 50%;
+        height: 50%;
+    }
+
+    .img {
+        display: block;
+        background-color: var(--color-dark-text);
+        margin: auto;
+        padding: 3em;
+    }
+
+    a {
+        width: fit-content;
+        height: fit-content;
+        width: 50%;
+        height: 50%;
+    }
+
+}
+
+@keyframes enlarge {
+    from {
+        transform: scale(100%);
+    }
+
+    to {
+        transform: scale(105%);
+    }
+}
