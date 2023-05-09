@@ -19,6 +19,8 @@ a {
     padding: 0;
     font-family: "Courier New", Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
     cursor: url(/img/korrel.png);
+
+    overscroll-behavior: none;
 }
 
 html {
